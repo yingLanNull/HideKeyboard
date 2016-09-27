@@ -23,6 +23,7 @@ dependencies {
 
 ```
 		HideUtil.init(this);
+```
 
 ```
 	{
