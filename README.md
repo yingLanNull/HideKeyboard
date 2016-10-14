@@ -42,7 +42,7 @@ dependencies {
 	该实现使用了Activity顶层布局android.R.id.content的OnTouchListener监听,重写此监听需注意;
 ```
 
-## LICENSE
+## LICENSE 开源协议
 
     Apache License Version 2.0
 
