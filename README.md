@@ -1,8 +1,8 @@
 # Hidekeyboard
-## 摘要
+## Abstract 摘要 
 仿照iOS实现点击非输入框区域 软键盘隐藏
 
-## Gif动画
+## Gif 动画
 ![1](https://github.com/yingLanNull/HideKeyboard/blob/master/show/show.gif)
 
 ## Demo 下载APK体验
@@ -36,7 +36,7 @@ dependencies {
     }
 
 ```
-## FAQ
+## FAQ 注意
 
 ```
 	该实现使用了Activity顶层布局android.R.id.content的OnTouchListener监听,重写此监听需注意;
