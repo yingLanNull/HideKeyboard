@@ -1,6 +1,6 @@
 # Hidekeyboard
 ## 摘要
-仿照iOS实现点击输入框以外区域 软键盘隐藏
+仿照iOS实现点击非输入框区域 软键盘隐藏
 
 ## Gif动画
 ![1](https://github.com/yingLanNull/HideKeyboard/blob/master/show/show.gif)
