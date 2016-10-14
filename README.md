@@ -39,7 +39,7 @@ dependencies {
 ## FAQ
 
 ```
-	该实现使用了Activity顶层布局android.R.id.content的OnTouchListener监听,若使用此功能需注意;
+	该实现使用了Activity顶层布局android.R.id.content的OnTouchListener监听,重写此监听需注意;
 ```
 
 ## LICENSE
