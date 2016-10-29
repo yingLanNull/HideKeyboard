@@ -36,7 +36,7 @@ dependencies {
     }
 
 ```
-## FAQ 注意
+## FAQ 问题解答
 
 ```
 	该实现使用了Activity顶层布局android.R.id.content的OnTouchListener监听,重写此监听需注意;
