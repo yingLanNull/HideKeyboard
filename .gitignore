@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.gradle/
+.idea/
+HideKeyboard.iml
+build/
+demo/build/
+demo/demo.iml
+hidekeyboard/build/
+hidekeyboard/hidekeyboard.iml
+local.properties
