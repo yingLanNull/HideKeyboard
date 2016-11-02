@@ -20,6 +20,9 @@ public class HideUtil {
     }
 
 
+    /**
+     * @param activity
+     */
     private HideUtil(final Activity activity) {
         ViewGroup content = (ViewGroup) activity.findViewById(android.R.id.content);
         content.setOnTouchListener(new View.OnTouchListener() {
@@ -33,6 +36,11 @@ public class HideUtil {
         });
     }
 
+    /**
+     * @param mActivity
+     * @param ev
+     * @return
+     */
     public boolean dispatchTouchEvent(Activity mActivity, MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             View v = mActivity.getCurrentFocus();
