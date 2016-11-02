@@ -15,15 +15,15 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="fragment" />
+        android:text="跳转至fragment" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="89798"/>
+        android:hint="测试"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="89798"/>
+        android:hint="测试"/>
 
 </LinearLayout>
