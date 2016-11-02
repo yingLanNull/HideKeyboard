@@ -10,7 +10,7 @@ import com.yinglan.keyboard.HideUtil;
 
 public class MainActivity extends AppCompatActivity {
 
-    private android.widget.Button button;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
