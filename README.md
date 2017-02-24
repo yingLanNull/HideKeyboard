@@ -13,7 +13,7 @@
 #### Gradle 配置
 ```
 dependencies {
-    compile 'com.yinglan.keyboard:hidekeyboard:0.0.2'
+    compile 'com.yinglan.keyboard:hidekeyboard:1.0.3'
 }
 ```
 
