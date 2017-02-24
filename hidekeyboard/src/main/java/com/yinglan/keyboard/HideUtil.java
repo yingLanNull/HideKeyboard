@@ -8,7 +8,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AbsListView;
 import android.widget.EditText;
+import android.widget.ScrollView;
 
 /**
  * Created by yinglan
@@ -34,6 +36,44 @@ public class HideUtil {
                 return false;
             }
         });
+
+        getScrollView(content, activity);
+    }
+
+    private void getScrollView(ViewGroup viewGroup, final Activity activity) {
+        if (null == viewGroup) {
+            return;
+        }
+        int count = viewGroup.getChildCount();
+        for (int i = 0; i < count; i++) {
+            View view = viewGroup.getChildAt(i);
+            if (view instanceof ScrollView) {
+                ScrollView newDtv = (ScrollView) view;
+                newDtv.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                        dispatchTouchEvent(activity, motionEvent);
+
+                        return false;
+                    }
+                });
+            } else if (view instanceof AbsListView) {
+                AbsListView newDtv = (AbsListView) view;
+                newDtv.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                        dispatchTouchEvent(activity, motionEvent);
+
+                        return false;
+                    }
+                });
+            } else if (view instanceof ViewGroup) {
+
+                this.getScrollView((ViewGroup) view, activity);
+            }
+        }
     }
 
     /**
