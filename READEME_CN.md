@@ -1,18 +1,18 @@
 # Hidekeyboard
-## Abstract
-Modelled on the iOS implementation click on the input box area, soft keyboard hide, a super easy to use library of lightweight.
+## 摘要 
+仿照iOS实现点击非输入框区域 软键盘隐藏 一款使用超简单的轻量级库
 
-## Chinese Documents
-[点击查看中文文档](https://github.com/yingLanNull/HideKeyboard/blob/master/READEME_CN.md)
+## 英文文档
+[View English Documents](https://github.com/yingLanNull/HideKeyboard)
 
-## Gif
+## 动画
 ![1](https://github.com/yingLanNull/HideKeyboard/blob/master/show/show.gif)
 
-## Demo
+## 下载APK体验
 [Download Demo](https://github.com/yingLanNull/HideKeyboard/blob/master/show/demo-debug.apk)
 
-## Usage
-### Step 1
+## 使用方法
+### 步骤 1
 #### Gradle 配置
 ```
 dependencies {
@@ -20,9 +20,9 @@ dependencies {
 }
 ```
 
-### Step 2
+### 步骤 2
 
-#### In Java Code
+#### 代码
 
 ```
 		HideUtil.init(this);
@@ -30,7 +30,7 @@ dependencies {
 
 ```
 	{
-	        @Override
+	       @Override
             protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
@@ -39,13 +39,13 @@ dependencies {
     }
 
 ```
-## FAQ
+## 注意
 
 ```
 	该实现使用了Activity顶层布局android.R.id.content的OnTouchListener监听,重写此监听需注意;
 ```
 
-## LICENSE
+## 开源协议
 
     Apache License Version 2.0
 
