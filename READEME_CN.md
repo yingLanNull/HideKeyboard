@@ -29,20 +29,20 @@ dependencies {
 ```
 
 ```
-	{
-	       @Override
-            protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_main);
-                HideUtil.init(this);
-            }
-    }
+{
+	 @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
+         HideUtil.init(this);
+     }
+}
 
 ```
 ## 注意
 
 ```
-	该实现使用了Activity顶层布局android.R.id.content的OnTouchListener监听,重写此监听需注意;
+	该实现使用了Activity顶层布局android.R.id.content的OnTouchListener监听,重写此监听需注意。
 ```
 
 ## 开源协议
