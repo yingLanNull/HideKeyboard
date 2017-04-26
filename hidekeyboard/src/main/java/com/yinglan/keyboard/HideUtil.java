@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Rect;
 import android.os.IBinder;
+import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,7 @@ public class HideUtil {
      */
     private HideUtil(final Activity activity) {
         ViewGroup content = (ViewGroup) activity.findViewById(android.R.id.content);
+        getScrollView(content, activity);
         content.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -36,8 +38,6 @@ public class HideUtil {
                 return false;
             }
         });
-
-        getScrollView(content, activity);
     }
 
     private void getScrollView(ViewGroup viewGroup, final Activity activity) {
@@ -60,6 +60,17 @@ public class HideUtil {
                 });
             } else if (view instanceof AbsListView) {
                 AbsListView newDtv = (AbsListView) view;
+                newDtv.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                        dispatchTouchEvent(activity, motionEvent);
+
+                        return false;
+                    }
+                });
+            } else if (view instanceof RecyclerView) {
+                RecyclerView newDtv = (RecyclerView) view;
                 newDtv.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View view, MotionEvent motionEvent) {

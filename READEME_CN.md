@@ -16,7 +16,7 @@
 #### Gradle 配置
 ```
 dependencies {
-    compile 'com.yinglan.keyboard:hidekeyboard:1.0.3'
+    compile 'com.yinglan.keyboard:hidekeyboard:1.1.0'
 }
 ```
 
@@ -25,7 +25,7 @@ dependencies {
 #### 代码
 
 ```
-		HideUtil.init(this);
+		HideUtil.init(context);
 ```
 
 ```
@@ -42,7 +42,7 @@ dependencies {
 ## 注意
 
 ```
-	该实现使用了Activity顶层布局android.R.id.content的OnTouchListener监听,重写此监听需注意。
+该实现使用了Activity顶层布局android.R.id.content的OnTouchListener监听,重写此监听需注意。
 ```
 
 ## 开源协议
