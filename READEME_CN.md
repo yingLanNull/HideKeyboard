@@ -24,10 +24,17 @@ dependencies {
 
 #### 代码
 
+##### 主要方法
+
 ```
 		HideUtil.init(context);
 ```
+或者	
+```
+		HideUtil.init(context,viewgroup);
+```
 
+##### 使用
 ```
 {
 	 @Override
@@ -35,6 +42,19 @@ dependencies {
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_main);
          HideUtil.init(this);
+     }
+}
+
+```
+或者
+```
+{
+	 @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
+         ViewGroup viewGroup = (ViewGroup) findViewById(R.id.activity_main);
+         HideUtil.init(this,viewGroup);
      }
 }
 

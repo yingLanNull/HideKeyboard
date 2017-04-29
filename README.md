@@ -24,10 +24,16 @@ dependencies {
 
 #### In Java Code
 
+##### The main method
+
 ```
 		HideUtil.init(context);
 ```
-
+OR	
+```
+		HideUtil.init(context,viewgroup);
+```
+##### USE
 ```
 {
 	 @Override
@@ -35,6 +41,19 @@ dependencies {
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_main);
          HideUtil.init(this);
+     }
+}
+
+```
+OR
+```
+{
+	 @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
+         ViewGroup viewGroup = (ViewGroup) findViewById(R.id.activity_main);
+         HideUtil.init(this,viewGroup);
      }
 }
 
