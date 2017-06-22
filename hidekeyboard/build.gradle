@@ -25,3 +25,24 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:recyclerview-v7:23.0.0'
 }
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'HideKeyboard'
+    publishedGroupId = 'com.yinglan.keyboard'
+    libraryName = 'HideKeyboard'
+    artifact = 'hidekeyboard'
+    libraryDescription = 'Hide the keyboard'
+    siteUrl = 'https://github.com/yingLanNull/HideKeyboard'
+    gitUrl = 'https://github.com/yingLanNull/HideKeyboard'
+    libraryVersion = '1.1.2'
+    developerId = 'yingLanNull'
+    developerName = 'yingLanNull'
+    developerEmail = 'sufly0001@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

@@ -25,8 +25,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 /**
  * Created by yinglan
@@ -35,6 +37,7 @@ public class HideUtil {
 
     /**
      * Initialization method
+     *
      * @param activity
      */
     public static void init(Activity activity) {
@@ -43,6 +46,7 @@ public class HideUtil {
 
     /**
      * Can pass the outer layout
+     *
      * @param activity
      * @param content
      */
@@ -83,7 +87,6 @@ public class HideUtil {
                     public boolean onTouch(View view, MotionEvent motionEvent) {
 
                         dispatchTouchEvent(activity, motionEvent);
-
                         return false;
                     }
                 });
@@ -94,7 +97,6 @@ public class HideUtil {
                     public boolean onTouch(View view, MotionEvent motionEvent) {
 
                         dispatchTouchEvent(activity, motionEvent);
-
                         return false;
                     }
                 });
@@ -105,13 +107,21 @@ public class HideUtil {
                     public boolean onTouch(View view, MotionEvent motionEvent) {
 
                         dispatchTouchEvent(activity, motionEvent);
-
                         return false;
                     }
                 });
             } else if (view instanceof ViewGroup) {
-
                 this.getScrollView((ViewGroup) view, activity);
+            }
+
+            if (view.isClickable() && view instanceof TextView && !(view instanceof EditText)) {
+                view.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+                        dispatchTouchEvent(activity, motionEvent);
+                        return false;
+                    }
+                });
             }
         }
     }
