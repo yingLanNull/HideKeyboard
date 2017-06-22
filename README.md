@@ -16,7 +16,7 @@ Modelled on the iOS implementation click on the input box area, soft keyboard hi
 #### Gradle 配置
 ```
 dependencies {
-    compile 'com.yinglan.keyboard:hidekeyboard:1.1.0'
+    compile 'com.yinglan.keyboard:hidekeyboard:1.1.2'
 }
 ```
 

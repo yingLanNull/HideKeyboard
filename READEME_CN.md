@@ -14,9 +14,16 @@
 ## 使用方法
 ### 步骤 1
 #### Gradle 配置
+##### 可点击按钮点击支持触发隐藏键盘,如:Button的点击等。
 ```
 dependencies {
-    compile 'com.yinglan.keyboard:hidekeyboard:1.1.0'
+    compile 'com.yinglan.keyboard:hidekeyboard:1.1.2'
+}
+```
+##### 可点击按钮点击不可触发隐藏
+```
+dependencies {
+    compile 'com.yinglan.keyboard:hidekeyboard:1.1.1'
 }
 ```
 
