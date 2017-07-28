@@ -16,7 +16,7 @@ Modelled on the iOS implementation click on the input box area, soft keyboard hi
 #### Gradle
 ```
 dependencies {
-    compile 'com.yinglan.keyboard:hidekeyboard:1.1.2'
+    compile 'com.yinglan.keyboard:hidekeyboard:1.1.3'
 }
 ```
 
@@ -32,6 +32,11 @@ dependencies {
 OR	
 ```
 		HideUtil.init(context,viewgroup);
+```
+OR	
+```
+  //Forced hidden keyboard
+		HideUtil.hideSoftKeyboard(activity);
 ```
 ##### USE
 ```
@@ -57,6 +62,15 @@ OR
      }
 }
 
+```
+OR
+```
+view.findViewById(R.id.view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HideUtil.hideSoftKeyboard(getActivity());
+            }
+        });
 ```
 ## FAQ
 

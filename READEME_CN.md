@@ -17,7 +17,7 @@
 ##### 可点击按钮点击支持触发隐藏键盘,如:Button的点击等。
 ```
 dependencies {
-    compile 'com.yinglan.keyboard:hidekeyboard:1.1.2'
+    compile 'com.yinglan.keyboard:hidekeyboard:1.1.3'
 }
 ```
 ##### 可点击按钮点击不可触发隐藏
@@ -39,6 +39,11 @@ dependencies {
 或者	
 ```
 		HideUtil.init(context,viewgroup);
+```
+或者	
+```
+    //部分情况下init方法无法隐藏软键盘时，调用强制隐藏（1.1.3版本新增方法）
+		HideUtil.hideSoftKeyboard(activity);
 ```
 
 ##### 使用
@@ -65,6 +70,15 @@ dependencies {
      }
 }
 
+```
+或者
+```
+view.findViewById(R.id.view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HideUtil.hideSoftKeyboard(getActivity());
+            }
+        });
 ```
 ## 注意
 

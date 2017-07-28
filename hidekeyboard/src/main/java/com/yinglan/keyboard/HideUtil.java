@@ -55,6 +55,18 @@ public class HideUtil {
     }
 
     /**
+     * Forced hidden keyboard
+     * @param activity
+     */
+    public static void hideSoftKeyboard(Activity activity) {
+        View view = activity.getCurrentFocus();
+        if (null != view) {
+            InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
+
+    /**
      * @param activity
      */
     private HideUtil(final Activity activity, ViewGroup content) {

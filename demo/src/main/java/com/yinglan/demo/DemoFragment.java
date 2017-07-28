@@ -20,8 +20,17 @@ public class DemoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fm_layout, null);
+        View view = inflater.inflate(R.layout.fm_layout, null);
+        view.findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //在需要隐藏软键盘的地方，HideUtil.init(context)方法无效时可以尝试使用
+                HideUtil.hideSoftKeyboard(getActivity());
+            }
+        });
+        return view;
     }
+
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
