@@ -78,7 +78,9 @@ view.findViewById(R.id.view).setOnClickListener(new View.OnClickListener() {
 	The library implementation uses the top layer layout android.R.id.content the OnTouchListener listener, rewrite the monitor to be noted.
 ```
 
-## LICENSE
+## License
+The work done has been licensed under Apache License 2.0. The license file can be found
+[here](LICENSE). You can find out more about the license at:
 
-    Apache License Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
