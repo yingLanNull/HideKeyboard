@@ -16,7 +16,7 @@ Modelled on the iOS implementation click on the input box area, soft keyboard hi
 #### Gradle
 ```
 dependencies {
-    compile 'com.yinglan.keyboard:hidekeyboard:1.1.3'
+    compile 'com.yinglan.keyboard:hidekeyboard:1.2.0'
 }
 ```
 
@@ -37,6 +37,16 @@ OR
 ```
   //Forced hidden keyboard
 		HideUtil.hideSoftKeyboard(activity);
+```
+OR	
+```
+  //Forced hidden keyboard
+		HideUtil.hideSoftKeyboard(view);
+```
+OR	
+```
+  //Forced hidden keyboard
+		HideUtil.hideDialogSoftKeyboard(dialog);
 ```
 ##### USE
 ```
