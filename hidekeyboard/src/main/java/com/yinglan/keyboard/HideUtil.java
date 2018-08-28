@@ -16,6 +16,7 @@
 package com.yinglan.keyboard;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Rect;
 import android.os.IBinder;
@@ -25,7 +26,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -56,12 +56,46 @@ public class HideUtil {
 
     /**
      * Forced hidden keyboard
+     *
      * @param activity
      */
     public static void hideSoftKeyboard(Activity activity) {
+        if (null == activity) {
+            throw new RuntimeException("参数错误");
+        }
         View view = activity.getCurrentFocus();
         if (null != view) {
             InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
+
+    /**
+     * Forced hidden keyboard
+     *
+     * @param view
+     */
+    public static void hideSoftKeyboard(View view) {
+        if (null != view) {
+            InputMethodManager inputMethodManager = (InputMethodManager) view.getContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        } else {
+            throw new RuntimeException("参数错误");
+        }
+    }
+
+    /**
+     * Forced hidden keyboard
+     *
+     * @param dialog
+     */
+    public static void hideDialogSoftKeyboard(Dialog dialog) {
+        if (null == dialog) {
+            throw new RuntimeException("参数错误");
+        }
+        View view = dialog.getCurrentFocus();
+        if (null != view) {
+            InputMethodManager inputMethodManager = (InputMethodManager) dialog.getContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
             inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
     }
